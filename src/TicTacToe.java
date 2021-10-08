@@ -16,7 +16,7 @@ public class TicTacToe implements ActionListener{
 	JLabel textLabel2 = new JLabel();
 	
 	JPanel buttonPanel = new JPanel(); 
-	JButton[] buttons = new JButton[9];
+	JButton[] buttons = new JButton[9]; 
 	
 	boolean player;
 	
@@ -46,8 +46,7 @@ public class TicTacToe implements ActionListener{
 		titlePanel2.setLayout(new BorderLayout());
 		titlePanel2.setBounds(0, 70, 400, 50); 
 		titlePanel2.setBackground(new Color(25, 25, 25));
-
-
+		
 		buttonPanel.setBounds(0, 120, 400, 350); 
 		buttonPanel.setLayout(new GridLayout(3, 3));
 		buttonPanel.setBackground(new Color(22, 24, 30));
@@ -61,23 +60,24 @@ public class TicTacToe implements ActionListener{
 			buttons[i].setBackground(new Color(157, 166, 182));
 			buttons[i].setFocusable(false);
 			buttons[i].addActionListener(this);
-		}
+		} 
 		
 		titlePanel1.add(textLabel1);
-		titlePanel2.add(textLabel2);
+		titlePanel2.add(textLabel2); 
 
 		frame.add(titlePanel1 ) ;
 		frame.add(titlePanel2 ) ;
 		 
 		frame.add(buttonPanel);
 		
-		oxTurn();
+		oxTurn(); 
+
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		for(int i=0; i<9; i++) {
+ 		for(int i=0; i<9; i++) {
 			if(e.getSource() == buttons[i]) {
 				if(player) {
 					if(buttons[i].getText() == "") { 
@@ -256,9 +256,6 @@ public class TicTacToe implements ActionListener{
 		}
 		textLabel2.setText("Player Y wins");
 	}
-	
-	public void reStartGame() {
-		
-	}
+	 
 
 }
