@@ -51,7 +51,7 @@ public class TicTacToe implements ActionListener{
 		buttonPanel.setBounds(0, 120, 400, 350); 
 		buttonPanel.setLayout(new GridLayout(3, 3));
 		buttonPanel.setBackground(new Color(22, 24, 30));
-//		
+
 		for(int i=0; i<9; i++) {
 			buttons[i] = new JButton();
 			buttonPanel.add(buttons[i]);
@@ -117,14 +117,147 @@ public class TicTacToe implements ActionListener{
 	}
 	
 	public void check() {
+		if(
+				(buttons[0].getText() == "X") &&
+				(buttons[1].getText() == "X") &&
+				(buttons[2].getText() == "X")
+				) {
+			xPlayerWin(0, 1, 2);
+		}
+		if(
+				(buttons[3].getText() == "X") &&
+				(buttons[4].getText() == "X") &&
+				(buttons[5].getText() == "X")
+				) {
+			xPlayerWin(3, 4, 5);
+		}
+		if(
+				(buttons[6].getText() == "X") &&
+				(buttons[7].getText() == "X") &&
+				(buttons[8].getText() == "X")
+				) {
+			xPlayerWin(6, 7, 8);
+		}
+		if(
+				(buttons[0].getText() == "X") &&
+				(buttons[3].getText() == "X") &&
+				(buttons[6].getText() == "X")
+				) {
+			xPlayerWin(0, 3, 6);
+		}
+		if(
+				(buttons[1].getText() == "X") &&
+				(buttons[4].getText() == "X") &&
+				(buttons[7].getText() == "X")
+				) {
+			xPlayerWin(1, 4, 7);
+		}
+		if(
+				(buttons[2].getText() == "X") &&
+				(buttons[5].getText() == "X") &&
+				(buttons[8].getText() == "X")
+				) {
+			xPlayerWin(2, 5, 8);
+		}
+		if(
+				(buttons[0].getText() == "X") &&
+				(buttons[4].getText() == "X") &&
+				(buttons[8].getText() == "X")
+				) {
+			xPlayerWin(0, 4, 8);
+		}
+		if(
+				(buttons[2].getText() == "X") &&
+				(buttons[4].getText() == "X") &&
+				(buttons[6].getText() == "X")
+				) {
+			xPlayerWin(2, 4, 6);
+		}
 		
+		///
+		
+		if(
+				(buttons[0].getText() == "O") &&
+				(buttons[1].getText() == "O") &&
+				(buttons[2].getText() == "O")
+				) {
+			oPlayerWin(0, 1, 2);
+		}
+		if(
+				(buttons[3].getText() == "O") &&
+				(buttons[4].getText() == "O") &&
+				(buttons[5].getText() == "O")
+				) {
+			oPlayerWin(3, 4, 5);
+		}
+		if(
+				(buttons[6].getText() == "O") &&
+				(buttons[7].getText() == "O") &&
+				(buttons[8].getText() == "O")
+				) {
+			oPlayerWin(6, 7, 8);
+		}
+		if(
+				(buttons[0].getText() == "O") &&
+				(buttons[3].getText() == "O") &&
+				(buttons[6].getText() == "O")
+				) {
+			oPlayerWin(0, 3, 6);
+		}
+		if(
+				(buttons[1].getText() == "O") &&
+				(buttons[4].getText() == "O") &&
+				(buttons[7].getText() == "O")
+				) {
+			oPlayerWin(1, 4, 7);
+		}
+		if(
+				(buttons[2].getText() == "O") &&
+				(buttons[5].getText() == "O") &&
+				(buttons[8].getText() == "O")
+				) {
+			oPlayerWin(2, 5, 8);
+		}
+		if(
+				(buttons[0].getText() == "O") &&
+				(buttons[4].getText() == "O") &&
+				(buttons[8].getText() == "O")
+				) {
+			oPlayerWin(0, 4, 8);
+		}
+		if(
+				(buttons[2].getText() == "O") &&
+				(buttons[4].getText() == "O") &&
+				(buttons[6].getText() == "O")
+				) {
+			oPlayerWin(2, 4, 6);
+		}
 	}
 	
-	public void xWins(int a, int b, int c) {
-		
+	public void xPlayerWin(int a, int b, int c) {
+ 
+		buttons[a].setBackground(new Color(251, 108, 109));
+		buttons[b].setBackground(new Color(251, 108, 109));
+		buttons[c].setBackground(new Color(251, 108, 109));
+
+		for(int i=0; i<9; i++) {
+			buttons[i].setEnabled(false);
+		}
+		textLabel2.setText("Player X wins");
 	}
 	
-	public void oWins(int a, int b, int c) {
+	public void oPlayerWin(int a, int b, int c) {
+		buttons[a].setBackground(new Color(251, 108, 109));
+		buttons[b].setBackground(new Color(251, 108, 109));
+		buttons[c].setBackground(new Color(251, 108, 109));
+		
+		for(int i=0; i<9; i++) {
+			buttons[i].setEnabled(false);
+		}
+		textLabel2.setText("Player Y wins");
+	}
+	
+	public void reStartGame() {
 		
 	}
 
