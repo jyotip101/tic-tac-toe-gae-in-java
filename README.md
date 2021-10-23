@@ -1,4 +1,4 @@
-# tic-tac-toe-gae-in-java
+# tic-tac-toe-in-java
 ### Images of tic-tac-toe
 
 ![img1](https://user-images.githubusercontent.com/66724598/136996232-1f03e868-0568-4860-b074-f8bab60840ad.PNG)
